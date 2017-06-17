@@ -1,0 +1,57 @@
+div.portfolio-text {
+  height: 100%;
+
+  font-family: 'Open Sans', sans-serif;
+
+  animation-name: portfolio-text-fade;
+  animation-duration: 350ms;
+  animation-delay: 450ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-play-state: paused;
+
+  opacity: 0;
+
+  &.animate {
+    animation-play-state: running;
+  }
+
+  h1 {
+    // text-align: left;
+    font-weight: 600;
+    color: white;
+
+    margin-bottom: 0.3vh;
+  }
+
+  h4 {
+    // text-align: left;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: white;
+    opacity: 0.4;
+
+    margin-bottom: 4vh;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: 400;
+    opacity: 0.4;
+    color: white;
+
+    text-align: justify;
+    line-height: 1.75;
+  }
+}
+
+@keyframes portfolio-text-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

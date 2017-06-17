@@ -1,0 +1,119 @@
+div.portfolio-image {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: auto;
+
+  overflow-x: visible;
+
+  user-select: none;
+  user-drag: none;
+  pointer-events: none;
+
+  .main-image {
+    height: auto;
+    width: 100%;
+
+    opacity: 0;
+
+    animation-name: portfolio-image-scale, portfolio-image-fade;
+    animation-duration: 650ms, 830ms;
+    animation-delay: 300ms, 300ms;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-fill-mode: forwards, forwards;
+    animation-direction: normal, normal;
+    animation-play-state: paused, paused;
+
+    &.animate {
+      animation-play-state: running, running;
+    }
+
+    z-index: 1;
+  }
+
+  div.blur-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: scale(1.5);
+
+    user-select: none;
+    user-drag: none;
+    pointer-events: none;
+
+    animation-name: portfolio-blur-fade;
+    animation-duration: 600ms;
+    animation-delay: 750ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-play-state: paused;
+    
+    &.animate {
+      animation-play-state: running;
+    }
+
+    .blur-image {
+      height: auto;
+      width: 100%;
+
+      $blur-amount-fallback: 15px;
+
+      -webkit-filter: blur($blur-amount-fallback);
+      -moz-filter: blur($blur-amount-fallback);
+      -ms-filter: blur($blur-amount-fallback);
+      -o-filter: blur($blur-amount-fallback);
+      filter: blur($blur-amount-fallback);
+
+      $blur-amount: calc(8px + calc(0.35vw);
+      
+      -webkit-filter: blur($blur-amount);
+      -moz-filter: blur($blur-amount);
+      -ms-filter: blur($blur-amount);
+      -o-filter: blur($blur-amount);
+      filter: blur($blur-amount);
+    }
+  }
+}
+
+@keyframes portfolio-image-scale {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(initial);
+  }
+}
+
+@keyframes portfolio-image-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes portfolio-blur-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}

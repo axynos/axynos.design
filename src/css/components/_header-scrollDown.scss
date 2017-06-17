@@ -1,0 +1,59 @@
+div#scrollDown-container {
+  // align-self: flex-end;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  top: 0px;
+  left: 0px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding-bottom: 3vh;
+
+  user-select: none;
+  user-drag: none;
+  pointer-events: none;
+
+  z-index: 1;
+
+  .material-icons {
+    font-size: 2.15em;
+    color: white;
+
+    opacity: 0;
+
+    animation-name: scrollDown-fadeIn, scrollDown-move;
+    animation-duration: 350ms, 2.5s;
+    animation-fill-mode: forwards, none;
+    animation-delay: 1250ms, 1250ms;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease-out, ease-in-out;
+  }
+}
+
+@keyframes scrollDown-fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.75;
+  }
+}
+
+@keyframes scrollDown-move {
+  0% {
+    transform: translateY(-25%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-25%);
+  }
+}

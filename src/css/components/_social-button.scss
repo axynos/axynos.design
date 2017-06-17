@@ -1,0 +1,39 @@
+a.social-button {
+  opacity: 0.4;
+
+  text-decoration: none;
+
+  &:visited {
+    color: white;
+  }
+  
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05em;
+  text-transform: lowercase;
+  font-weight: 600;
+  
+  transition: all 150ms cubic-bezier(0.6, 0.0, 0.3, 1);
+  
+  &:hover {
+    opacity: 1;
+  }
+  
+  img {
+    height: 47px;
+  
+    border-radius: 2px;
+  
+    margin: 2vh 2vw;
+
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  
+    transition: all 150ms cubic-bezier(0.6, 0.0, 0.3, 1);
+  
+  }
+}

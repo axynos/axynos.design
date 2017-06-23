@@ -4,6 +4,7 @@ import twitterIcon from '../../svg/social/twitter.svg';
 import behanceIcon from '../../svg/social/behance.svg';
 import discordIcon from '../../svg/social/discord.svg';
 import mcmarketIcon from '../../svg/social/mcmarket.svg';
+import dribbbleIcon from '../../svg/social/dribbble.svg';
 
 export default function Contact() {
   return (
@@ -23,15 +24,20 @@ export default function Contact() {
           image={behanceIcon} 
           alt="behance"
           label="axynos" />
+	<SocialButton 
+          link="https://dribbble.com/axynos" 
+          image={dribbbleIcon} 
+          alt="dribbble"
+          label="axynos" />
         <SocialButton 
           image={discordIcon} 
           alt="discord"
           label="axynos#0973" />
-          <SocialButton 
-            link="http://bit.ly/axynos-site-shop" 
-            image={mcmarketIcon} 
-            alt="mcmarket thread"
-            label="mcm thread" />
+        <SocialButton 
+          link="http://bit.ly/axynos-site-shop" 
+          image={mcmarketIcon} 
+          alt="mcmarket thread"
+          label="mcm thread" />
       </div>
     </div>
   )
